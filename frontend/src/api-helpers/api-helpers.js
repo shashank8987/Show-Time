@@ -95,6 +95,19 @@ export const deleteBooking = async (id) => {
   return resData;
 };
 
+export const deleteMovie = async (id) => {
+  const res = await axios
+    .delete(`/movie/${id}`)
+    .catch((err) => console.log(err));
+
+  if (res.status !== 200) {
+    return console.log("Unepxected Error");
+  }
+
+  const resData = await res.data;
+  return resData;
+};
+
 export const getUserDetails = async () => {
   const id = localStorage.getItem("userId");
   const res = await axios.get(`/user/${id}`).catch((err) => console.log(err));

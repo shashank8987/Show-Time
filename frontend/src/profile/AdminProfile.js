@@ -1,16 +1,26 @@
 import { Box } from "@mui/system";
 import React, { Fragment, useEffect, useState } from "react";
-import { getAdminById } from "../api-helpers/api-helpers";
+import { getAdminById, deleteMovie } from "../api-helpers/api-helpers";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { IconButton, List, ListItem, ListItemText, Typography } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { useNavigate } from "react-router-dom";
 const AdminProfile = () => {
+  const navigate=useNavigate();
   const [admin, setAdmin] = useState();
   useEffect(() => {
     getAdminById()
       .then((res) => setAdmin(res.admin))
       .catch((err) => console.log(err));
   }, []);
+  const handleDelete = (id) => {
+    deleteMovie(id)
+      .then((res) =>{
+        console.log(res)
+        navigate("/")
+      } )
+      .catch((err) => console.log(err));
+  };
   return (
     <Box width={"100%"} display="flex">
       <Fragment>
@@ -78,7 +88,7 @@ const AdminProfile = () => {
                       Movie: {movie.title}
                     </ListItemText>
                     <IconButton
-                      // onClick={() => handleDelete(booking._id)}
+                      onClick={() => handleDelete(movie._id)}
                       color="error"
                     >
                       <DeleteForeverIcon />
