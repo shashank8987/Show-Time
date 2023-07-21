@@ -17,7 +17,7 @@ import {
           height: 320,
           borderRadius: 5,
           ":hover": {
-            boxShadow: "10px 10px 20px #ccc",
+            boxShadow: "11px 11px 21px #808080",
           },
         }}
       >

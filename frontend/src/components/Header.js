@@ -37,7 +37,7 @@ const Header = () => {
     }
   };
   return (
-    <AppBar position="sticky" sx={{ bgcolor: "#2b2d42" }}>
+    <AppBar position="sticky" sx={{ bgcolor: "#1d1d20ad" }}>
       <Toolbar>
         <Box width={"20%"}>
           <IconButton LinkComponent={Link} to="/">
@@ -54,7 +54,7 @@ const Header = () => {
                 sx={{ input: { color: "white" } }}
                 variant="standard"
                 {...params}
-                placeholder="Search Acroos Multiple Movies"
+                placeholder="Search Across Multiple Movies"
               />
             )}
           />
@@ -62,7 +62,7 @@ const Header = () => {
         <Box display={"flex"}>
           <Tabs
             textColor="inherit"
-            indicatorColor="secondary"
+            // indicatorColor="secondary"
             value={value}
             onChange={(e, val) => setValue(val)}
           >
@@ -70,7 +70,7 @@ const Header = () => {
             {!isAdminLoggedIn && !isUserLoggedIn && (
               <>
                 <Tab label="Admin" LinkComponent={Link} to="/admin" />
-                <Tab label="Auth" LinkComponent={Link} to="/auth" />
+                <Tab label="User" LinkComponent={Link} to="/auth" />
               </>
             )}
             {isUserLoggedIn && (

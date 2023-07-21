@@ -11,21 +11,25 @@ const Movies = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <Box margin={"auto"} marginTop={4}>
+    <Box margin={"auto"} marginTop={4} width={"vw"}>
       <Typography
         margin={"auto"}
         variant="h4"
         padding={2}
         width="40%"
-        bgcolor={"#900C3F"}
+        bgcolor={"#1d1d20ad"}
         color="white"
         textAlign={"center"}
+        borderRadius={"1%"}
+        fontFamily={"Georgia, 'Times New Roman', Times, serif"}
+        fontWeight={"bolder"}
+        boxShadow={"0 0 25px grey"}
       >
-        All Movies
+        ALL MOVIES
       </Typography>
       <Box
         width={"100%"}
-        margin="auto"
+        marginLeft="3.4%"
         marginTop={5}
         display={"flex"}
         justifyContent="flex-start"

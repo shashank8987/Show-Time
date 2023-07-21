@@ -13,17 +13,17 @@ const HomePage = () => {
   }, []);
   return (
     <Box width={"100%"} height="100%" margin="auto" marginTop={2}>
-      <Box margin={"auto"} width="80%" height={"40vh"} padding={2}>
+      <Box margin={"auto"} width="80%" height={"50vh"} padding={2} borderRadius={"4%"}>
         <img
-          src="https://i.ytimg.com/vi/bweRG6WueuM/maxresdefault.jpg"
+          src="https://wallpapercave.com/wp/wp10387943.jpg"
           alt="Brahmastra"
           width={"100%"}
           height={"100%"}
         />
       </Box>
       <Box padding={5} margin="auto">
-        <Typography variant="h4" textAlign={"center"}>
-          Latest Releases
+        <Typography variant="h3" textAlign={"center"} fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"500"} backgroundColor={"rgba(73, 77, 75, 0.349)"} boxShadow={"0 0 20px grey"} display={"inline"} justifyContent={"center"} marginLeft={63} padding={1}>
+          LATEST RELEASES
         </Typography>
       </Box>
       <Box

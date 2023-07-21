@@ -2,7 +2,8 @@ import { Box } from "@mui/system";
 import React, { Fragment, useEffect, useState } from "react";
 import { getAdminById } from "../api-helpers/api-helpers";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import { List, ListItem, ListItemText, Typography } from "@mui/material";
+import { IconButton, List, ListItem, ListItemText, Typography } from "@mui/material";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 const AdminProfile = () => {
   const [admin, setAdmin] = useState();
   useEffect(() => {
@@ -21,9 +22,11 @@ const AdminProfile = () => {
             alignItems={"center"}
             width={"30%"}
             padding={3}
+            boxShadow={"0 0 25px grey"}
+            backgroundColor={"rgba(73, 77, 75, 0.349)"}
           >
             <AccountCircleIcon
-              sx={{ fontSize: "10rem", textAlign: "center", ml: 3 }}
+              sx={{ fontSize: "10rem", textAlign: "center", ml: 18 }}
             />
 
             <Typography
@@ -33,6 +36,7 @@ const AdminProfile = () => {
               textAlign={"center"}
               border={"1px solid #ccc"}
               borderRadius={6}
+              fontFamily={"Georgia, 'Times New Roman', Times, serif"}
             >
               Email: {admin.email}
             </Typography>
@@ -42,11 +46,13 @@ const AdminProfile = () => {
           <Box width={"70%"} display="flex" flexDirection={"column"}>
             <Typography
               variant="h3"
-              fontFamily={"verdana"}
               textAlign="center"
               padding={2}
+              fontFamily={"Georgia, 'Times New Roman', Times, serif"}
+              fontWeight={"500"}
+              marginLeft={6}
             >
-              Added Movies
+              ADDED MOVIES
             </Typography>
             <Box
               margin={"auto"}
@@ -58,17 +64,25 @@ const AdminProfile = () => {
                 {admin.addedMovies.map((movie, index) => (
                   <ListItem
                     sx={{
-                      bgcolor: "#00d386",
+                      bgcolor: "#1d1d20ad",
                       color: "white",
                       textAlign: "center",
                       margin: 1,
+                      boxShadow:"0 0 16px grey",
+                      backgroundColor:"rgba(61, 66, 64, 0.518)"
                     }}
                   >
                     <ListItemText
-                      sx={{ margin: 1, width: "auto", textAlign: "left" }}
+                      sx={{ margin: 1, width: "auto", textAlign: "left", fontFamily: "Verdana, Geneva, Tahoma, sans-serif"}}
                     >
                       Movie: {movie.title}
                     </ListItemText>
+                    <IconButton
+                      // onClick={() => handleDelete(booking._id)}
+                      color="error"
+                    >
+                      <DeleteForeverIcon />
+                    </IconButton>
                   </ListItem>
                 ))}
               </List>

@@ -12,10 +12,11 @@ const AllMovies = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <Box margin="auto" marginTop={4}>
+    <Box marginTop={4}>
       <Typography variant="h4" padding={2} textAlign="center">
         All Movies
       </Typography>
+      <div marginTop={3}>
       <Box
         margin="auto"
         width="100%"
@@ -23,6 +24,7 @@ const AllMovies = () => {
         justifyContent="center"
         flexWrap={"wrap"}
         gap={4}
+        
       >
         {movies &&
           movies.map((movie, index) => (
@@ -36,6 +38,7 @@ const AllMovies = () => {
             />
           ))}
       </Box>
+      </div>
     </Box>
   );
 };

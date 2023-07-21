@@ -1,5 +1,6 @@
 import { Box } from "@mui/system";
 import React, { Fragment, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   deleteBooking,
   getUserBooking,
@@ -15,6 +16,7 @@ import {
 } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 const UserProfile = () => {
+  const navigate=useNavigate();
   const [bookings, setBookings] = useState();
   const [user, setUser] = useState();
   useEffect(() => {
@@ -28,7 +30,10 @@ const UserProfile = () => {
   }, []);
   const handleDelete = (id) => {
     deleteBooking(id)
-      .then((res) => console.log(res))
+      .then((res) =>{
+        console.log(res)
+        navigate("/")
+      } )
       .catch((err) => console.log(err));
   };
   return (
@@ -42,16 +47,20 @@ const UserProfile = () => {
             alignItems={"center"}
             width={"30%"}
             padding={3}
+            boxShadow={"0 0 25px grey"}
+            backgroundColor={"rgba(73, 77, 75, 0.349)"}
           >
             <AccountCircleIcon
-              sx={{ fontSize: "10rem", textAlign: "center", ml: 3 }}
+              sx={{ fontSize: "10rem", textAlign: "center", ml: 18 }}
             />
             <Typography
+              mt={1}
               padding={1}
               width={"auto"}
               textAlign={"center"}
               border={"1px solid #ccc"}
               borderRadius={6}
+              fontFamily={"Georgia, 'Times New Roman', Times, serif"}
             >
               Name: {user.name}
             </Typography>
@@ -62,6 +71,7 @@ const UserProfile = () => {
               textAlign={"center"}
               border={"1px solid #ccc"}
               borderRadius={6}
+              fontFamily={"Georgia, 'Times New Roman', Times, serif"}
             >
               Email: {user.email}
             </Typography>
@@ -71,7 +81,7 @@ const UserProfile = () => {
           <Box width={"70%"} display="flex" flexDirection={"column"}>
             <Typography
               variant="h3"
-              fontFamily={"verdana"}
+              fontFamily={"Georgia, 'Times New Roman', Times, serif"}
               textAlign="center"
               padding={2}
             >
@@ -87,10 +97,13 @@ const UserProfile = () => {
                 {bookings.map((booking, index) => (
                   <ListItem
                     sx={{
-                      bgcolor: "#00d386",
+                      bgcolor: "#1d1d20ad",
                       color: "white",
                       textAlign: "center",
                       margin: 1,
+                      fontFamily: "Verdana, Geneva, Tahoma, sans-serif",
+                      boxShadow:"0 0 16px grey",
+                      backgroundColor:"rgba(61, 66, 64, 0.518)"
                     }}
                   >
                     <ListItemText

@@ -6,13 +6,23 @@ import {
     TextField,
     Typography,
   } from "@mui/material";
+  import "./movie.css";
   import React, { useState } from "react";
   import { addMovie } from "../../api-helpers/api-helpers";
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
   const labelProps = {
     mt: 1,
     mb: 1,
   };
   const AddMovie = () => {
+    const toastOptions = {
+      position: "bottom-left",
+      autoClose: 3000,
+      pauseOnHover: false,
+      draggable: true,
+      theme: "dark",
+    };
     const [inputs, setInputs] = useState({
       title: "",
       description: "",
@@ -32,22 +42,32 @@ import {
       e.preventDefault();
       console.log(inputs, actors);
       addMovie({ ...inputs, actors })
-        .then((res) => console.log(res))
+        .then((res) =>{
+          toast.success('Movie Added Successfully!',toastOptions);
+          console.log(res)
+        } )
         .catch((err) => console.log(err));
     };
     return (
       <div>
         <form onSubmit={handleSubmit}>
           <Box
-            width={"50%"}
+            width={"40%"}
+            height={"40%"}
             padding={10}
-            margin="auto"
+            marginTop="4%"
+            marginBottom="4%"
+            marginLeft={"auto"}
+            marginRight={"auto"}
             display={"flex"}
             flexDirection="column"
-            boxShadow={"10px 10px 20px #ccc"}
+            boxShadow={"0 0 30px grey inset,0 0 25px grey"}
+            backgroundColor={"rgba(73, 77, 75, 0.349)"}
+            
+            borderRadius={"4%"}
           >
-            <Typography textAlign={"center"} variant="h5" fontFamily={"verdana"}>
-              Add New Movie
+            <Typography textAlign={"center"} variant="h5" fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"bolder"}>
+              ADD NEW MOVIE
             </Typography>
             <FormLabel sx={labelProps}>Title</FormLabel>
             <TextField
@@ -126,6 +146,7 @@ import {
             >
               Add New Movie
             </Button>
+            <ToastContainer />
           </Box>
         </form>
       </div>
