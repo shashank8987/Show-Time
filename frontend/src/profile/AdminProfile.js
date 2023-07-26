@@ -5,7 +5,16 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { IconButton, List, ListItem, ListItemText, Typography } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const AdminProfile = () => {
+  const toastOptions = {
+    position: "bottom-left",
+    autoClose: 2200,
+    pauseOnHover: false,
+    draggable: true,
+    theme: "dark",
+  };
   const navigate=useNavigate();
   const [admin, setAdmin] = useState();
   useEffect(() => {
@@ -13,11 +22,14 @@ const AdminProfile = () => {
       .then((res) => setAdmin(res.admin))
       .catch((err) => console.log(err));
   }, []);
-  const handleDelete = (id) => {
+  const handleDelete = (id,title) => {
     deleteMovie(id)
       .then((res) =>{
         console.log(res)
-        navigate("/")
+        toast.error(`'${title}' removed` ,toastOptions);
+        setTimeout(() => {
+          navigate('/movies');
+        }, 3700); 
       } )
       .catch((err) => console.log(err));
   };
@@ -36,7 +48,7 @@ const AdminProfile = () => {
             backgroundColor={"rgba(73, 77, 75, 0.349)"}
           >
             <AccountCircleIcon
-              sx={{ fontSize: "10rem", textAlign: "center", ml: 18 }}
+              sx={{ fontSize: "10rem", textAlign: "center", ml: 18, color:"white" }}
             />
 
             <Typography
@@ -47,6 +59,7 @@ const AdminProfile = () => {
               border={"1px solid #ccc"}
               borderRadius={6}
               fontFamily={"Georgia, 'Times New Roman', Times, serif"}
+              color={"white"}
             >
               Email: {admin.email}
             </Typography>
@@ -61,6 +74,7 @@ const AdminProfile = () => {
               fontFamily={"Georgia, 'Times New Roman', Times, serif"}
               fontWeight={"500"}
               marginLeft={6}
+              color={"whitesmoke"}
             >
               ADDED MOVIES
             </Typography>
@@ -88,10 +102,11 @@ const AdminProfile = () => {
                       Movie: {movie.title}
                     </ListItemText>
                     <IconButton
-                      onClick={() => handleDelete(movie._id)}
+                      onClick={() => handleDelete(movie._id,movie.title)}
                       color="error"
                     >
                       <DeleteForeverIcon />
+                      <ToastContainer/>
                     </IconButton>
                   </ListItem>
                 ))}

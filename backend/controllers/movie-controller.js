@@ -21,7 +21,7 @@ export const addMovie = async (req, res, next) => {
   });
 
   //create new movie
-  const { title, description, releaseDate, posterUrl, featured, actors } =
+  const { title, description, releaseDate, posterUrl, ticketPrice, trailerLink, featured, actors } =
     req.body;
   if (
     !title &&
@@ -29,7 +29,11 @@ export const addMovie = async (req, res, next) => {
     !description &&
     description.trim() == "" &&
     !posterUrl &&
-    posterUrl.trim() === ""
+    posterUrl.trim() === "" &&
+    !ticketPrice &&
+    ticketPrice.trim() === "" &&
+    !trailerLink &&
+    trailerLink.trim() === ""
   ) {
     return res.status(422).json({ message: "Invalid Inputs" });
   }
@@ -42,6 +46,8 @@ export const addMovie = async (req, res, next) => {
       featured,
       actors,
       admin: adminId,
+      ticketPrice,
+      trailerLink,
       posterUrl,
       title,
     });

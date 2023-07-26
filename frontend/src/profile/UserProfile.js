@@ -15,7 +15,16 @@ import {
   Typography,
 } from "@mui/material";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const UserProfile = () => {
+  const toastOptions = {
+    position: "bottom-left",
+    autoClose: 2500,
+    pauseOnHover: false,
+    draggable: true,
+    theme: "dark",
+  };
   const navigate=useNavigate();
   const [bookings, setBookings] = useState();
   const [user, setUser] = useState();
@@ -28,11 +37,15 @@ const UserProfile = () => {
       .then((res) => setUser(res.user))
       .catch((err) => console.log(err));
   }, []);
-  const handleDelete = (id) => {
+  const handleDelete = (id,title) => {
+    
     deleteBooking(id)
       .then((res) =>{
         console.log(res)
-        navigate("/")
+        toast.error(`Booking for '${title}' has been cancelled` ,toastOptions);
+        setTimeout(() => {
+          navigate('/');
+        }, 3700); 
       } )
       .catch((err) => console.log(err));
   };
@@ -51,7 +64,7 @@ const UserProfile = () => {
             backgroundColor={"rgba(73, 77, 75, 0.349)"}
           >
             <AccountCircleIcon
-              sx={{ fontSize: "10rem", textAlign: "center", ml: 18 }}
+              sx={{ fontSize: "10rem", textAlign: "center", ml: 18, color:"whitesmoke" }}
             />
             <Typography
               mt={1}
@@ -61,6 +74,7 @@ const UserProfile = () => {
               border={"1px solid #ccc"}
               borderRadius={6}
               fontFamily={"Georgia, 'Times New Roman', Times, serif"}
+              color={"white"}
             >
               Name: {user.name}
             </Typography>
@@ -72,6 +86,7 @@ const UserProfile = () => {
               border={"1px solid #ccc"}
               borderRadius={6}
               fontFamily={"Georgia, 'Times New Roman', Times, serif"}
+              color={"white"}
             >
               Email: {user.email}
             </Typography>
@@ -84,6 +99,7 @@ const UserProfile = () => {
               fontFamily={"Georgia, 'Times New Roman', Times, serif"}
               textAlign="center"
               padding={2}
+              color={"white"}
             >
               Bookings
             </Typography>
@@ -122,10 +138,11 @@ const UserProfile = () => {
                       Date: {new Date(booking.date).toDateString()}
                     </ListItemText>
                     <IconButton
-                      onClick={() => handleDelete(booking._id)}
+                      onClick={() => handleDelete(booking._id,booking.movie.title)}
                       color="error"
                     >
                       <DeleteForeverIcon />
+                      <ToastContainer/>
                     </IconButton>
                   </ListItem>
                 ))}

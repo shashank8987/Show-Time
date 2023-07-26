@@ -18,6 +18,14 @@ const movieSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  ticketPrice: {
+    type: Number,
+    required:true,
+  },
+  trailerLink:{
+    type: String,
+    required:true
+  },
   featured: {
     type: Boolean,
   },

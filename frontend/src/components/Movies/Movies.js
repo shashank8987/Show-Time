@@ -11,7 +11,7 @@ const Movies = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <Box margin={"auto"} marginTop={4} width={"vw"}>
+    <Box marginRight={0} marginTop={4} width={"100%"}>
       <Typography
         margin={"auto"}
         variant="h4"

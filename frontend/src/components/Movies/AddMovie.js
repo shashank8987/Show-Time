@@ -14,6 +14,7 @@ import {
   const labelProps = {
     mt: 1,
     mb: 1,
+    color: "whitesmoke"
   };
   const AddMovie = () => {
     const toastOptions = {
@@ -27,6 +28,8 @@ import {
       title: "",
       description: "",
       posterUrl: "",
+      ticketPrice:"",
+      trailerLink:"",
       releaseDate: "",
       featured: false,
     });
@@ -43,7 +46,8 @@ import {
       console.log(inputs, actors);
       addMovie({ ...inputs, actors })
         .then((res) =>{
-          toast.success('Movie Added Successfully!',toastOptions);
+          toast.success(`'${inputs.title}' Added Successfully!`,toastOptions);
+
           console.log(res)
         } )
         .catch((err) => console.log(err));
@@ -61,12 +65,12 @@ import {
             marginRight={"auto"}
             display={"flex"}
             flexDirection="column"
-            boxShadow={"0 0 30px grey inset,0 0 25px grey"}
+            boxShadow={"0 0 15px grey inset,0 0 2px grey"}
             backgroundColor={"rgba(73, 77, 75, 0.349)"}
             
             borderRadius={"4%"}
           >
-            <Typography textAlign={"center"} variant="h5" fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"bolder"}>
+            <Typography textAlign={"center"} variant="h5" fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"bolder"} color={"white"}>
               ADD NEW MOVIE
             </Typography>
             <FormLabel sx={labelProps}>Title</FormLabel>
@@ -93,6 +97,22 @@ import {
               variant="standard"
               margin="normal"
             />
+            <FormLabel sx={labelProps}>Ticket Price</FormLabel>
+            <TextField
+              value={inputs.ticketPrice}
+              onChange={handleChange}
+              name="ticketPrice"
+              variant="standard"
+              margin="normal"
+            />
+            <FormLabel sx={labelProps}>Trailer Link</FormLabel>
+            <TextField
+              value={inputs.trailerLink}
+              onChange={handleChange}
+              name="trailerLink"
+              variant="standard"
+              margin="normal"
+            />
             <FormLabel sx={labelProps}>Release Date</FormLabel>
             <TextField
               type={"date"}
@@ -102,7 +122,7 @@ import {
               variant="standard"
               margin="normal"
             />
-            <FormLabel sx={labelProps}>Actor</FormLabel>
+            <FormLabel sx={labelProps}>Casts</FormLabel>
             <Box display={"flex"}>
               <TextField
                 value={actor}
@@ -138,9 +158,9 @@ import {
               sx={{
                 width: "30%",
                 margin: "auto",
-                bgcolor: "#2b2d42",
+                bgcolor: "rgb(16, 16, 16)",
                 ":hover": {
-                  bgcolor: "#121217",
+                  bgcolor: "black",
                 },
               }}
             >

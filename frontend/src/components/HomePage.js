@@ -22,7 +22,7 @@ const HomePage = () => {
         />
       </Box>
       <Box padding={5} margin="auto">
-        <Typography variant="h3" textAlign={"center"} fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"500"} backgroundColor={"rgba(73, 77, 75, 0.349)"} boxShadow={"0 0 20px grey"} display={"inline"} justifyContent={"center"} marginLeft={63} padding={1}>
+        <Typography variant="h3" textAlign={"center"} fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"500"} backgroundColor={"black"} boxShadow={"0 0 15px grey"} display={"inline"} justifyContent={"center"} marginLeft={63} padding={1} color={"rgb(63, 61, 61)"}>
           LATEST RELEASES
         </Typography>
       </Box>
@@ -39,7 +39,7 @@ const HomePage = () => {
             .slice(0, 4)
             .map((movie, index) => (
               <MovieItem
-                id={movie.id}
+                id={movie._id}
                 title={movie.title}
                 posterUrl={movie.posterUrl}
                 releaseDate={movie.releaseDate}
@@ -52,7 +52,7 @@ const HomePage = () => {
           LinkComponent={Link}
           to="/movies"
           variant="outlined"
-          sx={{ margin: "auto", color: "#2b2d42" }}
+          sx={{ margin: "auto", color: "white" }}
         >
           View All Movies
         </Button>

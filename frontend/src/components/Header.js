@@ -40,7 +40,7 @@ const Header = () => {
     <AppBar position="sticky" sx={{ bgcolor: "#1d1d20ad" }}>
       <Toolbar>
         <Box width={"20%"}>
-          <IconButton LinkComponent={Link} to="/">
+          <IconButton LinkComponent={Link} to="/" style={{color:"rgba(190, 186, 186, 0.849)"}}>
             <MovieIcon />
           </IconButton>
         </Box>
@@ -62,9 +62,9 @@ const Header = () => {
         <Box display={"flex"}>
           <Tabs
             textColor="inherit"
-            // indicatorColor="secondary"
+            indicatorColor="secondary"
             value={value}
-            onChange={(e, val) => setValue(val)}
+            onChange={(e) => setValue(e.target.value)}
           >
             <Tab LinkComponent={Link} to="/movies" label="Movies" />
             {!isAdminLoggedIn && !isUserLoggedIn && (
