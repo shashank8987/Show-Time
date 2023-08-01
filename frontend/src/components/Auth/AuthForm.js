@@ -62,6 +62,7 @@ import {
                   variant="standard"
                   type={"text"}
                   name="name"
+                  sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
                 />
               </>
             )}
@@ -73,6 +74,7 @@ import {
               variant="standard"
               type={"email"}
               name="email"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelStyle}>Password</FormLabel>
             <TextField
@@ -82,6 +84,7 @@ import {
               variant="standard"
               type={"password"}
               name="password"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <Button
               sx={{ mt: 2, borderRadius: 10, bgcolor: "#2b2d42" }}

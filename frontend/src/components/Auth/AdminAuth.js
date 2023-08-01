@@ -75,6 +75,7 @@ import {
               fullWidth
               margin="normal"
               placeholder="Email"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelSx}>Password</FormLabel>
             <TextField
@@ -86,6 +87,7 @@ import {
               fullWidth
               margin="normal"
               placeholder="Password"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <Button
               sx={{ borderRadius: 10, mt: 2, bgcolor: "#2b2d42" }}

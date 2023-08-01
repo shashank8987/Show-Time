@@ -134,6 +134,7 @@ const Booking = () => {
                     type={"number"}
                     margin="normal"
                     variant="standard"
+                    sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
                   />
                   <FormLabel style={{color:"white"}}>Amount to be Paid</FormLabel>
                   <TextField
@@ -143,6 +144,7 @@ const Booking = () => {
                     variant="standard"
                     value={inputs.seatNumber*movie.ticketPrice}
                     onChange={handleChange}
+                    sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
                   />
                   <FormLabel style={{color:"white"}}>Booking Date</FormLabel>
                   <TextField
@@ -152,6 +154,7 @@ const Booking = () => {
                     variant="standard"
                     value={inputs.date}
                     onChange={handleChange}
+                    sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
                   />
                   <Button type="submit" sx={{ mt: 3 }}>
                     Book Now

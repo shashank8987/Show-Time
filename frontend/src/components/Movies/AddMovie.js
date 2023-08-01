@@ -80,6 +80,7 @@ import {
               name="title"
               variant="standard"
               margin="normal"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelProps}>Description</FormLabel>
             <TextField
@@ -88,6 +89,7 @@ import {
               name="description"
               variant="standard"
               margin="normal"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelProps}>Poster URL</FormLabel>
             <TextField
@@ -96,6 +98,8 @@ import {
               name="posterUrl"
               variant="standard"
               margin="normal"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
+              borderColor="white"
             />
             <FormLabel sx={labelProps}>Ticket Price</FormLabel>
             <TextField
@@ -104,6 +108,7 @@ import {
               name="ticketPrice"
               variant="standard"
               margin="normal"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelProps}>Trailer Link</FormLabel>
             <TextField
@@ -112,6 +117,7 @@ import {
               name="trailerLink"
               variant="standard"
               margin="normal"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelProps}>Release Date</FormLabel>
             <TextField
@@ -121,6 +127,7 @@ import {
               name="releaseDate"
               variant="standard"
               margin="normal"
+              sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
             />
             <FormLabel sx={labelProps}>Casts</FormLabel>
             <Box display={"flex"}>
@@ -130,6 +137,7 @@ import {
                 onChange={(e) => setActor(e.target.value)}
                 variant="standard"
                 margin="normal"
+                sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
               />
               <Button
                 onClick={() => {
