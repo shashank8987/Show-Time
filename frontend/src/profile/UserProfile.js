@@ -123,17 +123,17 @@ const UserProfile = () => {
                     }}
                   >
                     <ListItemText
-                      sx={{ margin: 1, width: "auto", textAlign: "left" }}
+                      sx={{ margin: 1, width: "25%", textAlign: "left" }}
                     >
                       Movie: {booking.movie.title}
                     </ListItemText>
                     <ListItemText
-                      sx={{ margin: 1, width: "auto", textAlign: "left" }}
+                      sx={{ margin: "auto", width: "19%", textAlign: "left" }}
                     >
                       Seat: {booking.seatNumber}
                     </ListItemText>
                     <ListItemText
-                      sx={{ margin: 1, width: "auto", textAlign: "left" }}
+                      sx={{ margin: 1, width: "30%", textAlign: "left" }}
                     >
                       Date: {new Date(booking.date).toDateString()}
                     </ListItemText>

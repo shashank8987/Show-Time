@@ -36,6 +36,7 @@ const Header = () => {
       navigate(`/booking/${movie._id}`);
     }
   };
+
   return (
     <AppBar position="sticky" sx={{ bgcolor: "#1d1d20ad" }}>
       <Toolbar>
@@ -64,12 +65,14 @@ const Header = () => {
             textColor="inherit"
             indicatorColor="secondary"
             value={value}
-            onChange={(e) => setValue(e.target.value)}
+            onChange={(e)=>setValue(e.target.value)
+            }
+            
           >
-            <Tab LinkComponent={Link} to="/movies" label="Movies" />
+            <Tab LinkComponent={Link} to="/movies" label="Movies"  />
             {!isAdminLoggedIn && !isUserLoggedIn && (
               <>
-                <Tab label="Admin" LinkComponent={Link} to="/admin" />
+                <Tab    label="Admin" LinkComponent={Link} to="/admin" />
                 <Tab label="User" LinkComponent={Link} to="/auth" />
               </>
             )}
@@ -86,8 +89,8 @@ const Header = () => {
             )}
             {isAdminLoggedIn && (
               <>
-                <Tab label="Add Movie" LinkComponent={Link} to="/add" />
-                <Tab label="Profile" LinkComponent={Link} to="/user-admin" />
+                <Tab  label="Add Movie" LinkComponent={Link} to="/add" />
+                <Tab   label="Profile" LinkComponent={Link} to="/user-admin" />
                 <Tab
                   onClick={() => logout(true)}
                   label="Logout"

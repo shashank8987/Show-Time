@@ -139,10 +139,10 @@ const Booking = () => {
                   <FormLabel style={{color:"white"}}>Amount to be Paid</FormLabel>
                   <TextField
                     name="price"
-                    type={"number"}
+                    type={"string"}
                     margin="normal"
                     variant="standard"
-                    value={inputs.seatNumber*movie.ticketPrice}
+                    value={"₹ "+(inputs.seatNumber*movie.ticketPrice)+".00"}
                     onChange={handleChange}
                     sx={{ input: { color: 'rgba(154, 154, 154, 0.861)' } }}
                   />
