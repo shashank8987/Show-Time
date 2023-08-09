@@ -130,7 +130,7 @@ npm run start
 <br/>
 <br/>
 
-- **Movie with it's other detail have been added to the recent movies list**
+- **Movie with it's detail will be added to the recent movies list**
 
 ![img15](./images/p12.png)
 <br/>
