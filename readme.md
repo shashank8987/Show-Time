@@ -17,6 +17,8 @@ Git cloning the repository
 ```
 git clone https://github.com/shashank8987/Show-Time.git
 ```
+Add your own env variables in .env file
+
 Installing all node modules for backend
 ```
 cd backend
