@@ -45,9 +45,12 @@ npm run start
 - Redux
 - Web Tokens
 
+## Screenshots
+
 - If not registered, users can first signup and then login to the application
-![img](./images/p17.png)
-![img](./images/p18.png)
+
+![img00](./images/p17.png)
+![img01](./images/p18.png)
 
 - The recently added 4 movies will be visible on the home page
 
