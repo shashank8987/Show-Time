@@ -13,27 +13,27 @@
 
 ## Installation
 
-Git cloning the repository
+- Git cloning the repository
 ```
 git clone https://github.com/shashank8987/Show-Time.git
 ```
-Add your own env variables in .env file
+- Add your own env variables in .env file
 
-Installing all node modules for backend
+- Installing all node modules for backend
 ```
 cd backend
 npm install
 ```
-Installing all react modules
+- Installing all react modules
 ```
 cd frontend
 npm install
 ```
-Go to the frontend directory and the following command to start the react server
+- Go to the frontend directory and the following command to start the react server
 ```
 npm start
 ```
-Go to the backend directory and the following command to start the backend server
+- Go to the backend directory and the following command to start the backend server
 ```
 npm run start
 ```
