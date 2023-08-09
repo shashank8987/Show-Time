@@ -22,8 +22,8 @@ const HomePage = () => {
         />
       </Box>
       <Box padding={5} margin="auto">
-        <Typography variant="h3" textAlign={"center"} fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"500"} backgroundColor={"black"} boxShadow={"0 0 15px grey"} display={"inline"} justifyContent={"center"} marginLeft={63} padding={1} color={"rgb(63, 61, 61)"}>
-          LATEST RELEASES
+        <Typography variant="h3" textAlign={"center"} fontFamily={"Georgia, 'Times New Roman', Times, serif"} fontWeight={"500"} display={"inline"} justifyContent={"center"} marginLeft={63} padding={1} color={"white"}>
+          LATEST <span style={{backgroundColor:"white", color:"black", padding:"0.8%", marginLeft:"0.5", fontWeight:"100"}}>RELEASES</span>
         </Typography>
       </Box>
       <Box
