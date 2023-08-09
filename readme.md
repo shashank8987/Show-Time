@@ -1,8 +1,6 @@
 # SHOW-TIME
 ## _The movie booking application_
 
-<p align="center">
-</p>
 
 
 
@@ -41,17 +39,15 @@ npm run start
 ## Technology Stack:
 
 - ReactJs
-
 - NodeJs
-
 - Express
-
 - MongoDB
-
 - Redux
-
 - Web Tokens
 
+- If not registered, users can first signup and then login to the application
+![img](./images/p17.png)
+![img](./images/p18.png)
 
 - The recently added 4 movies will be visible on the home page
 
@@ -63,11 +59,53 @@ npm run start
 
 - Users can also search for the latest movies
 
-<p>
-    <img src="./images/p3.png" width="220" height="240" />
-</p>
+![img3](./images/p3.png)
 
 - Users can select the movie they want to book and on the booking page they can see the description, cast and Ticket Price of the movie
+
+![img4](./images/p4.png)
+
+- Users can watch the trailer of the movie in the app itself
+
+![img5](./images/p5.png)
+
+- Users can select the number of seats to be booked and the date of booking, the amount to be paid will be generated automatically. After booking, the popup will be generated on the bottom-left corner of the screen
+
+![img6](./images/p14.png)
+
+- Users can see the list of bookings they made in the user-profile page
+
+![img7](./images/p13.png)
+
+- Users can cancel the booking by clicking on the cancel(Red) button. The cancellation pop-up will be generated on the bottom-left side of the screen and the movie will be removed from the booked movies list
+
+![img8](./images/p15.png)
+![img9](./images/p16.png)
+
+- Other than user, we have an admin panel as well which can be accessed only by an admin as users don't have the credentials for admin panel
+
+    ![img10](./images/p6.png)
+
+- After login admin can go to their profile page and see the list of movies they have added
+
+    ![img11](./images/p7.png)
+
+- Admin can also remove the movies that have became old by clicking on the red icon and the removal pop-up will be generated on the bottom-left of the screen and the movie will be removed from the list
+
+![img12](./images/p8.png)
+
+- Admin can add the new movies in the list with the ticket price, description and casts of the movies
+
+![img13](./images/p9.png)
+![img14](./images/p10.png)
+
+- Movie with it's other detail have been added to the recent movies list
+
+![img15](./images/p12.png)
+
+### Developed By - Shashank Shekhar
+
+
 
 
 
