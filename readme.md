@@ -53,11 +53,11 @@ npm run start
 
 ![img00](./images/p17.png)
 ![img01](./images/p18.png)
-<br/>
+<hr/>
 - The recently added 4 movies will be visible on the home page
 
 ![img1](./images/p1.png)
-<br/>
+<hr/>
 - Users can go to All Movies section to view all the latest movies
 
 ![img2](./images/p2.png)
