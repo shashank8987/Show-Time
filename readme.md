@@ -15,7 +15,7 @@ Featuring dual panels for both admin and users, show time is a movie ticket book
 - Web tokens 
   
 ###
-![scrreshot](./images/p1.png)
+![alt text](https://github.com/shashank8987/Show-Time.git/blob/master/images/p1.png?raw=true)
 
 ## To start the app :
 
