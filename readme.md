@@ -45,7 +45,7 @@ npm run start
 - Redux
 - Web Tokens
 
-## Screenshots
+## Screenshots:
 
 - If not registered, users can first signup and then login to the application
 
