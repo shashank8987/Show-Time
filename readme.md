@@ -53,19 +53,23 @@ npm run start
 
 ![img00](./images/p17.png)
 ![img01](./images/p18.png)
-<hr/>
+<br/>
+<br/>
 - The recently added 4 movies will be visible on the home page
 
 ![img1](./images/p1.png)
-<hr/>
+<br/>
+<br/>
 - Users can go to All Movies section to view all the latest movies
 
 ![img2](./images/p2.png)
-
+<br/>
+<br/>
 - Users can also search for the latest movies
 
 ![img3](./images/p3.png)
-
+<br/>
+<br/>
 - Users can select the movie they want to book and on the booking page they can see the description, cast and Ticket Price of the movie
 
 ![img4](./images/p4.png)
