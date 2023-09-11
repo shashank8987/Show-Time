@@ -136,8 +136,6 @@ npm run start
 <br/>
 <br/>
 
-### Developed By - Shashank Shekhar
-
 
 
 
